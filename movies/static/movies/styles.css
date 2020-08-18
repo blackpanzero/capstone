@@ -1,0 +1,452 @@
+
+
+  #video{
+  display: none;
+
+  }
+
+  /* Tooltip container */
+  .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+  .fa-edit{
+    cursor: pointer;
+  }
+  .search_div{
+    background-color: rgb(32, 15, 15);
+    padding: 100px;
+    background-size: cover;
+
+   background-blend-mode: overlay;
+   background-repeat: no-repeat;
+  }
+.form-review{
+  display: none;
+}
+.btn-search,.btn-search:active{
+   
+
+
+   background-color: inherit!important;
+   border: none !important;
+  
+}
+#search-heading,#rec-heading{
+   text-align: center;
+}
+
+.review,#user_review{
+  width: 90%!important;
+  margin: auto;
+}
+
+.search2{
+   border-radius: 17px!important;
+   width: 85%!important;
+   
+
+}
+.image{
+
+ padding: 5px;
+ width: 100%;
+ padding: 0px;
+
+ 
+   
+   
+}
+.noimage{
+   border: 1px solid #ddd;
+ border-radius: 4px;
+ padding: 5px;
+ width: 100%;
+ height: 350px!important;
+ background-image: url();
+ 
+   
+   
+}
+body{
+
+   background-blend-mode: overlay;
+  
+   padding: 10px;
+
+  
+}
+.prof_image{
+   
+ border-radius: 4px;
+ padding-left: 25px;
+ width:90%;
+ text-align: center!important;
+ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+
+
+}
+.pointer{
+   cursor: pointer;
+
+}
+
+
+
+
+
+.location button{
+	background-color: inherit;
+	color: white;
+	padding: 1px;
+	border: 1px white solid;
+	border-radius: 15px;
+
+	font-size: 15px ;
+	
+}
+
+
+/*FOOTER*/
+
+.social{
+
+	position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the bottom of the page */
+  width: 100%; /* Full width */
+
+
+}
+
+
+.copyright{
+    float: right!important;
+    clear: both;
+}
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    clear: both;
+  }
+  
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background:inherit;
+    color: white;
+    clear: both;
+  
+    
+  
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: inherit;
+    color: white;
+    clear: both;
+  
+   
+  }
+.footer-copyright,.footer-copyright a,.footer-links,.footer-links a,.footer-social{
+    color: white;
+    
+    text-decoration: none;
+}
+.footer-links a,.page-footer{
+    background-color: rgb(14, 13, 44);
+
+
+}
+.page-footer{
+  background-color: rgb(14, 13, 44); 
+  background-blend-mode: overlay;
+  background-image: url("https://images.newscientist.com/wp-content/uploads/2020/02/11165812/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg");
+  background-size: cover;
+}
+.footer-copyright,.footer-copyright a{
+    
+    background-color: rgb(9, 8, 27);
+
+}
+
+.center-text{
+    text-align: center!important;
+
+}
+.smth{
+    background-image: url("https://newsroom.clevelandclinic.org/wp-content/uploads/sites/4/2020/03/cleveland-clinic-covid19-illustration-logo-1-scaled.jpg");
+  
+   
+}
+
+
+.home-newsletter .single h2 {
+font-size: 22px;
+color: white;
+text-transform: uppercase;
+margin-bottom: 40px; }
+.home-newsletter .single .form-control {
+
+min-width: 150px;
+background: rgba(255, 255, 255, 0.6);
+ }
+
+.home-newsletter .single .btn {
+
+
+background: #243c4f;
+color: #fff;
+}
+form{
+  width: 70%;
+  margin: auto;
+}
+.fieldset { 
+  border-top:0px;
+  border-left: 0px;
+  border-right: 0px;
+
+}
+
+.form-control:focus {
+  border-color: #4c05f1;
+  box-shadow: none;
+}
+
+
+.contact-h4{
+  background-color: rgb(37, 191, 211);
+  padding: 1px;
+
+  color: white;
+}
+a{
+  color: white;
+  text-decoration: none!important;
+}
+
+.First-paragraph{
+ 
+
+    padding: 10%;
+    color: rgb(255, 255, 255);
+    font-weight: 50px;
+
+}
+.First-paragraph p{
+  font-size: 20px;
+}
+
+.small-letters{
+  font-size: 10px;
+}
+
+.width60{
+  width: 60%;
+  margin: auto;
+  padding:3% ;
+}
+
+.contact-btn{
+  background-color: inherit;
+ 
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: white solid 1px;
+ 
+  
+  font-size: 20px;
+
+}
+.contact-btn:hover{
+  background-color: white;
+ 
+  color: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: black solid 1px;
+ 
+  
+  font-size: 20px;
+
+}
+.favourite{
+  color: red;
+}
+.unfavourite{
+  color: white;
+}
+	
+@media only screen and (max-width: 600px) {
+  #games_nav,#game_view{
+    display: none!important;
+  }
+  .search2{
+    border-radius: 17px!important;
+    width: 100%!important;
+    
+ 
+ }
+  form {
+    width: 100%;
+  }
+ 
+
+ 
+
+  }
+
+  .container{
+    height: 100%;
+    align-content: center;
+   
+    }
+    
+    .card{
+    height: 420px!important;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+   
+    
+    }
+    
+    .social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+    }
+    
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    
+    .social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+    }
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+    .remember{
+      color: white;
+      }
+      
+      .remember input
+      {
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+      margin-right: 5px;
+      }
+      
+      .login_btn{
+      color: black;
+      background-color: #FFC312;
+      width: 100px;
+      }
+      
+      .login_btn:hover{
+      color: black;
+      background-color: white;
+      }
+     
+    
+
+      canvas {
+        border: 10px solid rgb(2, 128, 2);
+      }
+  
+      #gamer{
+   
+        display: flex!important;
+        align-items: center!important;
+        justify-content: center!important;
+    
+      }
+      .polaroid{
+        background-color: white;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+        margin-bottom: 25px;
+        width: 95%;
+      }
+      .divcontainer{
+        text-align: center;
+        padding: 10px 20px;
+        color: black;
+        border-radius: 10px;
+   
+      }
+      .par{
+        padding-right: 24px;
+      }
+ 
+  .checked {
+    color: orange;
+  }
+  .fa-star{
+    padding: 0px!important;
+
+   
+    font-size: 10px;
+    width: unset;
+    text-align: unset;
+    
+  }
+  .rating{
+    display: none;
+  }

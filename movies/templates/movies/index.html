@@ -1,0 +1,185 @@
+{% extends "movies/layout.html" %}
+{% load static %}
+
+
+
+{% block body %}
+<div class="rating" id="star1">
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span>
+<span class="fa fa-star "></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</div>
+
+<div class="rating" id="star2">
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  </div>
+
+  <div class="rating" id="star3">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+    </div>
+
+    <div class="rating" id="star4">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      </div>
+
+      <div class="rating" id="star5">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        </div>
+
+     
+  <div id="body_view">
+<!-- Search form -->
+<div class="search_div" style="color: white;">
+<h1 id="movie_heading">Welcome.</h1>
+<h3 id="movie_par">Millions of movies to discover. Explore now.</h3>
+
+
+
+
+<form class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan search" id="search_form" method="POST" >
+<button class="btn-search" type="submit" ><i class="fa fa-search"   style="color:white" aria-hidden="true"></i></button> 
+ <input class="form-control form-control-sm ml-3 w-75 search2" type="text" placeholder="Search for a movie" 
+   aria-label="Search" name="searchquerry" id="search" required>
+
+  
+</form>
+</div>
+<br>
+
+<h1 style="color: black;" id="rec-heading"></h1>
+    <div id="emails-view" class="row">
+
+    </div>
+    <h1 id="search-heading"></h1>
+    <div id="search-view" class="row">
+    </div>
+
+  
+    <div id="favourites-view" class="row">
+    </div>
+<br>
+
+<div id="user_review">
+  <div class="alert alert-primary alert-dismissible fade show" id="alert" role="alert">
+
+    <span id="message"></span>
+  
+    <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <!-- REVIEW FORM -->
+  <form method="POST" class=" text-center  border-light p-5 form-review" >
+    {% csrf_token %}
+    <div class="contact-h4">
+    <br>
+        <p class="h4 mb-4 contact-h4">Share Your Movie Review  </p>
+        
+      </div>
+      <br>
+        <div class="form-group">
+            
+            <select id="rating" name="rating" class="form-control" required>
+                <option selected value="" disabled>Rating between 1-5</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        
+        <div class="form-group ">
+            <div class="input-group">
+                
+                <textarea name="comment" id="entered_review" class="form-control" rows="5" placeholder="How was the movie?" required></textarea>
+            </div>
+        </div>
+        <div class="form-group col-sm">
+            <button class="btn btn-info btn-block"" type="submit">Submit</button>
+            
+        
+    </div>
+</form>
+
+<div class="embed-responsive embed-responsive-16by9 z-depth-3" id="video">
+  <iframe class="embed-responsive-item" src="" allowfullscreen></iframe>
+</div>
+<br>
+
+<h2 id="user_review-heading" class="center-text"></h2>
+<span id="user_review_entered"> </span>
+
+</div>
+<br>
+    <h2 id="review-heading" class="list-group center-text"></h2>
+    <div id="review-view" class="review">
+            
+  
+    </div>
+
+    <div id="game_view">
+      
+             <h1 style="float: left;color: green;">Snake</h1>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right;">
+  Leaderboard
+</button>
+  
+      <span id="gamer" style="display: flex;align-items: center;justify-content: center;">
+        <canvas width="400" height="400" id="game"></canvas>
+     
+          </span>
+        <h3 id="score" style="color: white;text-align: center;" ></h3>
+        <h3 id="highscore" style="color: white;text-align: center;" class="align-items-center"></h3>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ol class="mod">
+
+        </ol>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+  </div>
+
+    <button class="btn btn-info btn-block" id="load">Load More</button>
+
+
+
+{% endblock %}
+

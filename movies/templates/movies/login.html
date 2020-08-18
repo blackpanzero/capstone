@@ -1,0 +1,72 @@
+{% extends "movies/layout.html" %}
+
+{% block body %}
+<style>
+body{
+    background-color: rgba(0,0,0,0.5) !important;
+
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2015/12/12/859165/786c3dbc95c87135e16451d2013cb6c5-700.jpg);
+    background-blend-mode: multiply!important;
+}
+</style>
+<script>
+      document.querySelector('#login').style.color="white"
+      document.querySelector('#home').style.color="grey"
+     
+  
+</script>
+<!--Fontawesome CDN-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<br>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Sign In</h3>
+            
+            </div>
+            <div class="card-body">
+
+                {% if message %}
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            <span>{{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endif %}
+
+                <form action="{% url 'login' %}" method="POST">
+                     {% csrf_token %}
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="username" name="username" autocomplete="off" required>
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="password" name="password" required autocomplete="off" >
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn float-right login_btn">
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    <span style="color: white;">Don't have an account?</span><a style="color:orange;" href="{%url 'register'%}">Sign Up</a>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,229 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <title>Movie Zone</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<link href="{% static 'movies/styles.css' %}" rel="stylesheet">
+
+<script src="{% static 'movies/movies.js' %}"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ 
+
+    
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+              <a class="navbar-brand">
+                   <h2>Movie Zone</h2>
+                  </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active" id="home-nav">
+                    <a href="{%url 'index'%}" class="nav-link" id="home">Home
+                          <span class="sr-only">(current)</span>
+                        </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link gamenav" id="games_nav">Games</a>
+                  </li>
+           
+               {% if user.is_authenticated %}
+               <li class="nav-item" id="nav-fav"> 
+                 <a  href="javascript:void(0)" class="nav-link" id="favourites_list">favourites</a>
+               </li>
+            
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle  nav-item" type="button" data-toggle="dropdown" data-hover="dropdown">
+                <span  id="username" style="color: grey;"> {{ user.username }}</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" style="background-color: rgba(255, 0, 0, 0.4);;">
+                  <li> <a  href="{%url 'logout'%}" class="nav-link" style="color: white;">Logout</a></li>
+                 
+                </ul>
+              </div>
+              
+               
+               
+               {%else%}
+               <li class="nav-item">
+                 <a href="{%url 'login'%}" class="nav-link" id="login">Login</a>
+               </li>
+               {%endif%}
+
+               
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+          
+     
+            {% block body %}
+            {% endblock %}
+
+            <br>
+                    <!-- Footer -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color: #6351ce;" class="smth">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0 footer-social">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a target="_blank" href="https://www.facebook.com/Tassiacentralsda/" class="fb-ic">
+              <i class="fab fa fa-facebook white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fa fa-twitter"> </i>
+            </a>
+            <!-- youtube-->
+            <a class="gplus-ic" href="https://www.youtube.com/channel/UCwdZXyzz-Svw6xGz7Ewk_KA" target="_blank">
+                <i class="fa fa-youtube" style="font-size:20px;color:white"></i>
+            </a>
+            <!-- whatsapp-->
+            <a class="gplus-ic">
+                <i class="fa fa-whatsapp" style="font-size:20px;color:white"></i>
+            </a>
+           
+         
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container footer-links  text-md-left mt-5">
+
+        <h2 class="center-text">COVID19 Pandemic Stats</h2>
+        <br>
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+                <!-- Grid column -->
+ 
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h4>The coronavirus disease 2019 (COVID-19) is a communicable respiratory 
+            disease caused by a new strain of coronavirus that causes illness in humans.</h4>
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" style="font-style:italic;" target="_blank">Learn More</a>
+  
+          <!-- Content -->
+        
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+       
+  
+        </div>
+              
+        
+    
+
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-9 col-lg-9 col-xl-6 mx-auto mb-4 center-text">
+            <h4  class="country_entered"   style="text-decoration: underline;">Global</h4>
+          <!-- Links -->
+          <h4 class="text-uppercase font-weight-bold">coronavirus cases:</h4>
+     
+          <h5 class="cases">
+       
+          </h5>
+          <h4 class="text-uppercase font-weight-bold">Deaths:</h4>
+         
+
+          <h5 class="deaths" style="color: red;">
+           
+          </h5>
+          <h4 class="text-uppercase font-weight-bold">Recovered:</h4>
+      
+
+          <h5 class="recovered" style="color: green;">
+          
+          </h5>
+        
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+  
+  
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+            <!-- Content -->
+            <h6 class="text-uppercase font-weight-bold">Search by country</h6>
+       
+  
+            <section class="home-newsletter">
+              
+              
+                  <div class="single">
+                   
+                  <form class="input-group" method="POST" id="covid_search">
+                    {% csrf_token %}
+                       <input type="text" class="form-control" placeholder="Enter country name" id="country">
+                       <span class="input-group-btn">
+                       <button class="btn btn-theme" type="submit">Search</button>
+                       </span>
+                  </form>
+                  </div>
+                  
+              
+              </section>
+    
+          </div>
+  
+        </div>
+        <!-- Grid column -->
+   
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      CS50 Final Project
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+       
+    </body>
+</html>
