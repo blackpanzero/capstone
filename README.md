@@ -46,43 +46,49 @@ The APIs include:
 
 # GET /movies/covid/${country}
 I used this API to obtain latest covid19 stats of countries entered in the search bar in the footer.
-
+```
         fetch(`/movies/covid/${country}`)
               .then(response => response.json())
               .then(results => {
                   console.log(results)
               })
-                                                 
+```                                                
 # GET /movie/{movie_id}
 This was used to get the primary information about a movie
-```
+
    fetch("https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US")
           .then(response => response.json())
           .then(result => {
            console.log(result)
           })
-          ```
 # GET /search/movie
 This wis used in searching of movies by entering of keywords
+```
    fetch(`https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=${search}&page=1&include_adult=false`)
           .then(response => response.json())
           .then(result => {
            console.log(result)
           })
+      
+```
+
 
 
 # GET /movies/fav/favourites
 This was used to get movies tht a user has saved to favourites
-
-   fetch(`/movies/fav/favourites`)
+```
+fetch(`/movies/fav/favourites`)
           .then(response => response.json())
           .then(result => {
            console.log(result)
           })
+```
+   
+        
 
 # POST /movies/review/${movieid}
 This was used in saving reviews for a particular movie using the movieid
-
+```
     fetch(`/movies/review/${movieid}`, {
             method: 'POST',
             body: JSON.stringify({
@@ -94,29 +100,32 @@ This was used in saving reviews for a particular movie using the movieid
                   .then(result => {
                       console.log(result);
                   })
+```
 
 # GET /movie/{movie_id}/reviews
 This was used to get reviews from the  moviedb website on a particular movie
-
+```
 fetch(`https://api.themoviedb.org/3/movie/${movieid}/reviews?api_key=<<api_key>>&language=en-US&page=1`)
   .then(response => response.json())
   .then(result => {
       console.log(result)
   })
+```
 
 # GET /movie/popular
 This was used to get a list of currently popular movies
-
+```
 fetch(`https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1`)
   .then(response => response.json())
   .then(result => {
       console.log(result)
   })
+```
 
 
 # GET /movies/all/all
 This was used in saving movies to favourites through storing of the movied id
-
+```
  fetch(`/movies/all/all`, {
                       method: 'POST',
                       body: JSON.stringify({
@@ -128,25 +137,27 @@ This was used in saving movies to favourites through storing of the movied id
                             .then(result => {
                                 console.log(result.message);
                             })
-
+```
 
 # GET /movie/{movie_id}/videos
 This was used to obtain movie trailers and teasers for each movie
-
+```
 fetch(`https://api.themoviedb.org/3/movie/${movieid}/videos?api_key=<<api_key>>&language=en-US`)
   .then(response => response.json())
   .then(result => {
       console.log(result)
   })
+```
+
 # GET /movie/{movie_id}/similar
 Get a list of similar movies
-
+```
 fetch(`https://api.themoviedb.org/3/movie/{movie_id}/similar?api_key=<<api_key>>&language=en-US&page=1`)
   .then(response => response.json())
   .then(result => {
       console.log(result)
   })
 
-
+```
 
 
