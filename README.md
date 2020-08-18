@@ -55,12 +55,13 @@ I used this API to obtain latest covid19 stats of countries entered in the searc
                                                  
 # GET /movie/{movie_id}
 This was used to get the primary information about a movie
-
-   fetch(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US`)
+```
+   fetch("https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US")
           .then(response => response.json())
           .then(result => {
            console.log(result)
           })
+          ```
 # GET /search/movie
 This wis used in searching of movies by entering of keywords
    fetch(`https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=${search}&page=1&include_adult=false`)
