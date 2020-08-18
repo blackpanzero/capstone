@@ -26,7 +26,7 @@ All webpages of the project are mobile-responsive.
     - `views.py` respectively, contains all application views.
   - `finalproject` - project directory.
 
-## APIS
+### APIS
 I utilized a number of APIs in the implementation of my single-page project.These APIs enable the user:
 
 * View Popular movies details on the home page
@@ -44,7 +44,7 @@ I utilized a number of APIs in the implementation of my single-page project.Thes
 
 The APIs include:
 
-# GET /movies/covid/${country}
+#### GET /movies/covid/${country}
 I used this API to obtain latest covid19 stats of countries entered in the search bar in the footer.
 ```
         fetch(`/movies/covid/${country}`)
@@ -53,7 +53,7 @@ I used this API to obtain latest covid19 stats of countries entered in the searc
                   console.log(results)
               })
 ```                                                
-# GET /movie/{movie_id}
+#### GET /movie/{movie_id}
 This was used to get the primary information about a movie
 
    fetch("https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US")
@@ -61,7 +61,7 @@ This was used to get the primary information about a movie
           .then(result => {
            console.log(result)
           })
-# GET /search/movie
+#### GET /search/movie
 This wis used in searching of movies by entering of keywords
 ```
    fetch(`https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=${search}&page=1&include_adult=false`)
@@ -74,7 +74,7 @@ This wis used in searching of movies by entering of keywords
 
 
 
-# GET /movies/fav/favourites
+#### GET /movies/fav/favourites
 This was used to get movies tht a user has saved to favourites
 ```
 fetch(`/movies/fav/favourites`)
@@ -86,7 +86,7 @@ fetch(`/movies/fav/favourites`)
    
         
 
-# POST /movies/review/${movieid}
+#### POST /movies/review/${movieid}
 This was used in saving reviews for a particular movie using the movieid
 ```
     fetch(`/movies/review/${movieid}`, {
@@ -102,7 +102,7 @@ This was used in saving reviews for a particular movie using the movieid
                   })
 ```
 
-# GET /movie/{movie_id}/reviews
+#### GET /movie/{movie_id}/reviews
 This was used to get reviews from the  moviedb website on a particular movie
 ```
 fetch(`https://api.themoviedb.org/3/movie/${movieid}/reviews?api_key=<<api_key>>&language=en-US&page=1`)
@@ -112,7 +112,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieid}/reviews?api_key=<<api_key>>
   })
 ```
 
-# GET /movie/popular
+#### GET /movie/popular
 This was used to get a list of currently popular movies
 ```
 fetch(`https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1`)
@@ -123,7 +123,7 @@ fetch(`https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=e
 ```
 
 
-# GET /movies/all/all
+#### GET /movies/all/all
 This was used in saving movies to favourites through storing of the movied id
 ```
  fetch(`/movies/all/all`, {
@@ -139,7 +139,7 @@ This was used in saving movies to favourites through storing of the movied id
                             })
 ```
 
-# GET /movie/{movie_id}/videos
+#### GET /movie/{movie_id}/videos
 This was used to obtain movie trailers and teasers for each movie
 ```
 fetch(`https://api.themoviedb.org/3/movie/${movieid}/videos?api_key=<<api_key>>&language=en-US`)
@@ -149,7 +149,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieid}/videos?api_key=<<api_key>>&
   })
 ```
 
-# GET /movie/{movie_id}/similar
+#### GET /movie/{movie_id}/similar
 Get a list of similar movies
 ```
 fetch(`https://api.themoviedb.org/3/movie/{movie_id}/similar?api_key=<<api_key>>&language=en-US&page=1`)
