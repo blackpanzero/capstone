@@ -1,5 +1,5 @@
 django
-django-heroku
+django_on_heroku
 gunicorn==19.9.0
 psycopg2
 django-on-heroku
